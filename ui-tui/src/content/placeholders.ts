@@ -1,10 +1,10 @@
 import { pick } from '../lib/text.js'
 
 export const PLACEHOLDERS = [
-  'Ask me anything…',
+  'Describe your goal, relevant context, and desired result…',
   'Try "explain this codebase"',
   'Try "write a test for…"',
-  'Try "refactor the auth module"',
+  'Try "review the auth module and make one small, tested improvement"',
   'Try "/help" for commands',
   'Try "fix the lint errors"',
   'Try "how does the config loader work?"'

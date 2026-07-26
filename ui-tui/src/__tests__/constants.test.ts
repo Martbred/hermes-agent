@@ -19,6 +19,11 @@ describe('constants', () => {
     }
   })
 
+  it('composer placeholders teach scoped, verifiable requests', () => {
+    expect(PLACEHOLDERS.some(s => s.includes('goal') && s.includes('context') && s.includes('desired result'))).toBe(true)
+    expect(PLACEHOLDERS.some(s => s.includes('small, tested improvement'))).toBe(true)
+  })
+
   it('HOTKEYS are [key, desc] pairs', () => {
     HOTKEYS.forEach(([k, d]) => {
       expect(typeof k).toBe('string')

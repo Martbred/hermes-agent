@@ -1068,6 +1068,12 @@ class TestPromptBuilderConstants:
     def test_default_identity_non_empty(self):
         assert len(DEFAULT_AGENT_IDENTITY) > 50
 
+    def test_default_identity_matches_language_and_limits_clarification(self):
+        identity = DEFAULT_AGENT_IDENTITY.lower()
+        assert "user's language and tone" in identity
+        assert "materially change the correct outcome" in identity
+        assert "reasonable assumption" in identity
+
     def test_platform_hints_known_platforms(self):
         assert "whatsapp" in PLATFORM_HINTS
         assert "whatsapp_cloud" in PLATFORM_HINTS
