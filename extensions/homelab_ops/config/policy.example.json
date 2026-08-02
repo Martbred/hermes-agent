@@ -1,0 +1,19 @@
+{
+  "approval_ttl_seconds": 300,
+  "default_actor": "martin",
+  "autonomous_risk_levels": ["low"],
+  "require_approval_risk_levels": ["medium", "high", "critical"],
+  "maintenance_windows": [
+    {
+      "name": "Sunday maintenance",
+      "timezone": "Europe/Stockholm",
+      "day_of_week": "sunday",
+      "start": "20:00",
+      "end": "22:00"
+    }
+  ],
+  "notifications": {
+    "on_failure": true,
+    "on_high_risk_success": true
+  }
+}

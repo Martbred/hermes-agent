@@ -1,0 +1,40 @@
+{
+  "hosts": [
+    {
+      "name": "raspberrypi-5",
+      "address": "192.168.68.58",
+      "user": "martbred",
+      "port": 22,
+      "roles": ["dns", "ids", "monitoring-agent"],
+      "services": ["pihole-FTL", "suricata", "zabbix-agent2"],
+      "containers": [],
+      "ssh_identity_file": "~/.ssh/hermes_homelab_ed25519",
+      "verify_host_key": true,
+      "enabled": true
+    },
+    {
+      "name": "raspberrypi-4",
+      "address": "192.168.68.100",
+      "user": "martbred",
+      "port": 22,
+      "roles": ["docker", "zabbix", "observability"],
+      "services": ["docker", "zabbix-server", "zabbix-agent2"],
+      "containers": ["portainer", "grafana", "prometheus", "loki"],
+      "ssh_identity_file": "~/.ssh/hermes_homelab_ed25519",
+      "verify_host_key": true,
+      "enabled": true
+    },
+    {
+      "name": "mini-pve-1",
+      "address": "192.168.68.10",
+      "user": "root",
+      "port": 22,
+      "roles": ["proxmox", "virtualization"],
+      "services": ["pveproxy", "pvedaemon"],
+      "containers": [],
+      "ssh_identity_file": "~/.ssh/hermes_homelab_ed25519",
+      "verify_host_key": true,
+      "enabled": false
+    }
+  ]
+}
